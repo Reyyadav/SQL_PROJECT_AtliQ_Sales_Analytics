@@ -120,6 +120,7 @@
 ### Module: Database Views: Introduction
 
 -- Get the net_invoice_sales amount using the CTE's
+
 	WITH cte1 AS (
 		SELECT 
     		    s.date, 
@@ -149,7 +150,8 @@
 
 
 -- Creating the view `sales_preinv_discount` and store all the data in like a virtual table
-	CREATE  VIEW `sales_preinv_discount` AS
+	
+    CREATE  VIEW `sales_preinv_discount` AS
 	SELECT 
     	    s.date, 
             s.fiscal_year,
@@ -175,6 +177,7 @@
     		pre.fiscal_year=s.fiscal_year
 
 ### -- Now generate net_invoice_sales using the above created view "sales_preinv_discount"
+
 	SELECT 
             *,
     	    (gross_price_total-pre_invoice_discount_pct*gross_price_total) as net_invoice_sales
