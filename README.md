@@ -7,6 +7,9 @@
 ### - Top Markets
 
 
+The objective of the project is to develop SQL queries that analyze transactional data to identify the top customers, products, and markets for a given business. This involves writing queries to calculate relevant metrics such as total purchase value, sales volume, and market share, and ranking customers, products, and markets accordingly. Additionally, stored procedures and views are created to encapsulate the query logic and provide a simplified interface for accessing the results. The project aims to derive insights that inform strategic decision-making and improve business performance.
+
+
 ###  Problem Statement and Pre-Invoice Discount Report
 
 ### -- Include pre-invoice deductions in Croma detailed report
@@ -243,7 +246,8 @@
         	limit in_top_n;
 	END
 
--- stored procedure that takes market, fiscal_year and top n as an input and returns top n customers by net sales in that given fiscal year and market
+### -- Created a stored procedure that takes market, fiscal_year and top n as an input and returns top n customers by net sales in that given fiscal year and market
+
 	CREATE PROCEDURE `get_top_n_customers_by_net_sales`(
         	in_market VARCHAR(45),
         	in_fiscal_year INT,
