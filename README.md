@@ -114,12 +114,7 @@
 	LIMIT 1500000;
 
 
-
-
-
-### Module: Database Views: Introduction
-
--- Get the net_invoice_sales amount using the CTE's
+### -- Also net_invoice_sales amount using the CTE's
 
 	WITH cte1 AS (
 		SELECT 
@@ -148,8 +143,8 @@
 	FROM cte1
 	LIMIT 1500000;
 
-
--- Creating the view `sales_preinv_discount` and store all the data in like a virtual table
+### Creating views can be a beneficial approach to simplify complex queries, encapsulate frequently used logic, and enhance query performance. Here's how you can incorporate views into the SQL Project:
+### -- Creating the view `sales_preinv_discount` and store all the data in like a virtual table
 	
     CREATE  VIEW `sales_preinv_discount` AS
 	SELECT 
@@ -184,12 +179,6 @@
 	FROM gdb0041.sales_preinv_discount
 
 
-
-
-
-
-
-### Creating views can be a beneficial approach to simplify complex queries, encapsulate frequently used logic, and enhance query performance. Here's how you can incorporate views into the SQL Project:
 ### Database Views: Post Invoice Discount, Net Sales
 
 ### -- Create a view for post invoice deductions: `sales_post_inv_discount`
